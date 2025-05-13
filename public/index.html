@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+        async function checkAndRedirect() {
+      const targetUrl = "https://cmxbcqguzbnu.eu-central-1.clawcloudrun.com/";
+
+      try {
+        const response = await fetch(targetUrl, { method: 'HEAD', mode: 'no-cors' });
+        // Redirect regardless of response due to 'no-cors'
+        window.location.href = targetUrl;
+      } catch (error) {
+        // If the fetch fails (e.g., server is down), go to index2.html
+        window.location.href = "index2.html";
+      }
+    }
+
+    window.onload = checkAndRedirect;
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
